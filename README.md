@@ -4,6 +4,11 @@ yaml files to run [eko/tado-exporter](https://github.com/eko/tado-exporter) in k
 
 ## Install
 
+Create secrets
+
+    kubectl create secret generic tado --from-literal=username=yourusername --from-literal=password=password
+
+
 Start pods and define service
 
     kubectl apply -f deployment.yaml
