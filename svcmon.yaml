@@ -1,24 +1,17 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-        #labels:
-        #serviceapp: redis-servicemonitor
-        #release: prometheus
   labels:
     app: tado-servicemonitor
   name: tado-servicemonitor
-  namespace: mon
+  #namespace: mon
 spec:
   endpoints:
     - port: metrics
       path: /
-    #interval: 60s 
-    #bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
   namespaceSelector:
     matchNames:
     - tado
   selector:
     matchLabels:
       app: tado-exporter
-      #  targetLabels:
-      #    - app
