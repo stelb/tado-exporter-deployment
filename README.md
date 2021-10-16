@@ -1,6 +1,6 @@
 # tado-exporter for kubernetes
 
-yaml files to run eko/tado-exporter in kubernetes
+yaml files to run [eko/tado-exporter](https://github.com/eko/tado-exporter) in kubernetes
 
 ## Install
 
